@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div align="center">
+		<h1>Create New User</h1>
+		<br />
+		<form action="#" th:action="@{/register}" th:object="${register}"
+			method="post">
+
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>User Name:</td>
+					<td><input type="text" th:field="*{name}" /></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><input type="password" th:field="*{pasword}" /></td>
+				</tr>
+				<tr>
+					<td>Age:</td>
+					<td><input type="text" th:field="*{age}" /></td>
+				</tr>
+				<tr>
+					<td>Address:</td>
+					<td>
+					<textarea rows="4" cols="50" th:field="*{address}" ></textarea>
+				</tr>								
+				<tr>
+					<td colspan="2"><button type="submit">Register</button> </td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

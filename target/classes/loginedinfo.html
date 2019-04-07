@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>address</th>
+                           </tr>
+        </thead>
+        <tbody>
+            <tr th:object="${user}">
+            	<td th:text="*{name}">Name</td>
+                <td th:text="*{age}">Age</td>
+                <td th:text="*{address}">address</td>
+            </tr>
+        </tbody>
+    </table>
+    <a th:href="@{'/logout'}">Log Out</a>
+    <a th:href="@{'/home'}">Home</a>
+    
+    
+</body>
+</html>
